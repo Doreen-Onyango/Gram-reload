@@ -30,3 +30,21 @@ func PuncTuate(str []string) []string {
 	}
 	return str
 }
+
+func QuOtes(str []string) []string {
+	count := 0
+	for index, val := range str {
+		if val == "'" && count == 0 {
+			count++
+			str[index+1] = val + str[index+1]
+			str = append(str[:index], str[index+1:]...)
+		}
+	}
+	for index, val := range str {
+		if val == "'" {
+			str[index-1] += val
+			str = append(str[:index], str[index+1:]...)
+		}
+	}
+	return str
+}
