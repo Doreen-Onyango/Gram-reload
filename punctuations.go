@@ -1,7 +1,7 @@
 package reload
 
 // check for punctuations at the middle of a str and relocates it to the required position
-func PuncTuation(str []string) []string {
+func Punctuation(str []string) []string {
 	punc := []string{".", ",", "!", "?", ":", ";"}
 	for index, val := range str {
 		for _, value := range punc {
@@ -14,7 +14,7 @@ func PuncTuation(str []string) []string {
 	return str
 }
 
-func PuncTuate(str []string) []string {
+func Punctuate(str []string) []string {
 	punc := []string{".", ",", "!", "?", ":", ";"}
 	// check for punctuation at the end of the str
 	for index, val := range str {
@@ -32,7 +32,7 @@ func PuncTuate(str []string) []string {
 	return str
 }
 
-func QuOtes(str []string) []string {
+func Quotes(str []string) []string {
 	// check for the first quote in a string and combine it with the word next to it
 	count := 0
 	for index, val := range str {
