@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+// checks for instance of (hex) and (bin) and converts the previous slice of string into an integer and converts to decimal, then remove the (hex) and (bin)
 func HexBinDec(str []string) []string {
 	for index, val := range str {
 		if val == "(hex)" {
@@ -20,6 +21,7 @@ func HexBinDec(str []string) []string {
 	return str
 }
 
+// checks if a or A appears before a vowel and h then replaces it with an or An respectively
 func GrammerVow(str []string) []string {
 	vow := []string{"a", "e", "i", "o", "u", "h"}
 	for index, val := range str {
